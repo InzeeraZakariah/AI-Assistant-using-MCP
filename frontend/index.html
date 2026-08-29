@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Personal Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">AI Assistant</div>
+            <p class="subtitle">MCP Personal Assistant</p>
+
+            <div class="tools">
+                <div class="tool">
+                    <span>Calendar</span>
+                    <small>Google Calendar</small>
+                </div>
+                <div class="tool">
+                    <span>Tasks</span>
+                    <small>Google Tasks</small>
+                </div>
+                <div class="tool">
+                    <span>Weather</span>
+                    <small>Open-Meteo</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main class="main">
+
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <h1>AI Personal Assistant</h1>
+                    <p>Ask me about your calendar, tasks, or weather.</p>
+                </div>
+
+                <div class="status">
+                    <span id="statusDot" class="status-dot"></span>
+                    <span id="statusText">Connecting...</span>
+                </div>
+            </header>
+
+            <!-- Chat -->
+            <section id="chat" class="chat">
+                <div class="message assistant">
+                    <div class="message-content">
+                        <strong>Assistant</strong>
+                        <p>Hello! I am your AI personal assistant.</p>
+                        <p>You can ask me:</p>
+                        <ul>
+                            <li>Show my calendar</li>
+                            <li>Show my tasks</li>
+                            <li>What is the weather in Chennai?</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Suggestions -->
+            <div class="suggestions">
+                <button onclick="sendSuggestion('Show my calendar')">Show Calendar</button>
+                <button onclick="sendSuggestion('Show my tasks')">Show Tasks</button>
+                <button onclick="sendSuggestion('What is the weather in Chennai?')">Chennai Weather</button>
+            </div>
+
+            <!-- Input -->
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask your assistant..."
+                    autocomplete="off"
+                >
+                <button id="sendButton" onclick="sendMessage()">Send</button>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
